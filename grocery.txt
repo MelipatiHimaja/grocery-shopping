@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Groco - Your one-stop solution for fresh groceries, exclusive discounts, and convenient shopping.">
+    <meta name="keywords" content="Groceries, Fresh Produce, Discounts, Online Shopping, Dairy, Vegetables, Fruits">
+    <meta name="author" content="Groco Team">
+    <title>Groco - Online Grocery Store</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: #28a745;
+            color: white;
+        }
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .header .logo i {
+            margin-right: 10px;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #f0e68c;
+        }
+
+        .icons .fas {
+            font-size: 1.2rem;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .search-form {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background: #f8f9fa;
+        }
+        .home .content {
+            max-width: 600px;
+        }
+        .home h3 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+        .home p {
+            font-size: 1rem;
+            margin: 20px 0;
+            color: #555;
+        }
+        .home .btn {
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .home .btn:hover {
+            background: #218838;
+        }
+        .home-image {
+            max-width: 50%;
+            border-radius: 8px;
+        }
+
+        .features {
+            padding: 50px;
+            text-align: center;
+        }
+        .features h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .features .box-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .features .box {
+            flex: 1;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .features .box img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .categories {
+            padding: 50px;
+            background: #e9ecef;
+        }
+        .categories h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .categories .box-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .categories .box {
+            flex: 1;
+            padding: 20px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .categories .box img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer .social-links a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .footer .social-links a:hover {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header">
+    <a href="#" class="logo"><i class="fas fa-shopping-basket"></i> Groco</a>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#review">Review</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#faq">FAQ</a>
+        <a href="#testimonial">Testimonials</a>
+    </nav>
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="cart-btn" class="fas fa-shopping-cart"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+    </div>
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="Search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+</header>
+
+<!-- Home Section -->
+<section class="home" id="home">
+    <div class="content">
+        <h3>Fresh and Organic Groceries at Your Doorstep</h3>
+        <p>Explore our wide range of fresh produce and daily essentials. Save big with our exclusive offers!</p>
+        <a href="#products" class="btn">Shop Now</a>
+    </div>
+    <img src="home-banner.png" alt="Groceries at Doorstep" class="home-image">
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+    <h1 class="heading">Our <span>Features</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="feature-img-1.png" alt="Free Delivery">
+            <h3>Free Delivery</h3>
+            <p>Enjoy free delivery on all orders over $50.</p>
+        </div>
+        <div class="box">
+            <img src="feature-img-2.png" alt="Easy Payments">
+            <h3>Easy Payments</h3>
+            <p>Secure and hassle-free payment options.</p>
+        </div>
+        <div class="box">
+            <img src="feature-img-3.png" alt="Fresh Products">
+            <h3>Fresh Products</h3>
+            <p>Guaranteed fresh and high-quality groceries.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <h1>Stay Updated</h1>
+    <p>Subscribe to our newsletter to get the latest updates on discounts and products.</p>
+    <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+    </form>
+</section>
+
+<!-- Categories Section -->
+<section class="categories" id="categories">
+    <h1 class="heading">Product <span>Categories</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="vegetables.png" alt="Vegetables">
+            <h3>Vegetables</h3>
+            <p>Up to 20% off on fresh vegetables.</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+        <div class="box">
+            <img src="fruits.png" alt="Fruits">
+            <h3>Fruits</h3>
+            <p>Fresh fruits with up to 15% discount.</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+        <div class="box">
+            <img src="dairy.png" alt="Dairy Products">
+            <h3>Dairy Products</h3>
+            <p>Get the best deals on dairy essentials.</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonial" id="testimonial">
+    <h1 class="heading">What Our Customers <span>Say</span></h1>
+    <div class="swiper testimonial-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="customer-1.jpg" alt="Customer 1">
+                <h3>John Doe</h3>
+                <p>"Groco has revolutionized my grocery shopping experience! Fresh products and quick delivery."</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="customer-2.jpg" alt="Customer 2">
+                <h3>Jane Smith</h3>
+                <p>"The discounts and the variety are amazing. I always find what I need on Groco."</p>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="content">
+        <p>&copy; 2024 Groco. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
